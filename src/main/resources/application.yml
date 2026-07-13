@@ -1,3 +1,6 @@
 spring:
   application:
     name: safety-docs
+
+  profiles:
+    active: local

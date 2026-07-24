@@ -109,6 +109,15 @@
     border-color: #dc3545;
 }
 
+.work-description-input {
+    height: auto;
+    min-height: 100px;
+    padding: 10px 12px;
+
+    line-height: 1.6;
+    resize: vertical;
+}
+
 .field-error {
     margin: 7px 0 0;
 

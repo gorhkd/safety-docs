@@ -3,7 +3,6 @@ package com.paran.safety_docs.domain.document.entity;
 import com.paran.safety_docs.domain.work.entity.Work;
 import com.paran.safety_docs.global.common.entity.BaseEntity;
 import jakarta.persistence.*;
-import jdk.jfr.ContentType;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,7 +26,7 @@ public class Document extends BaseEntity {
     private String storeKey;
 
     @Column(name = "content_type",  nullable = false)
-    private ContentType contentType;
+    private String contentType;
 
     @Column(name = "file_size",  nullable = false)
     private Long fileSize;

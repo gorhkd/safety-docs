@@ -1,0 +1,56 @@
+<header
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+        th:fragment="header(activeMenu)"
+        class="top-header"
+>
+    <a th:href="@{/home}" class="brand">
+        <span class="brand-icon">
+            <i class="bi bi-grid-fill"></i>
+        </span>
+
+        <span class="brand-title">작업 문서 관리</span>
+    </a>
+
+    <nav class="header-actions">
+        <a
+                sec:authorize="isAuthenticated()"
+                th:href="@{list}"
+                class="header-nav-link"
+                th:classappend="${activeMenu == 'list'} ? ' active' : ''"
+                th:attr="aria-current=${activeMenu == 'list'} ? 'page' : null"
+        >
+            작업 목록
+        </a>
+
+        <a
+                sec:authorize="isAuthenticated()"
+                th:href="@{create}"
+                class="header-create-button"
+                th:classappend="${activeMenu == 'create'} ? ' active' : ''"
+                th:attr="aria-current=${activeMenu == 'create'} ? 'page' : null"
+        >
+            <i class="bi bi-plus-lg"></i>
+            작업 등록
+        </a>
+
+        <a
+                sec:authorize="isAnonymous()"
+                th:href="@{/login}"
+                class="header-login-button"
+        >
+            로그인
+        </a>
+
+        <form
+                sec:authorize="isAuthenticated()"
+                th:action="@{/logout}"
+                method="post"
+        >
+            <button type="submit" class="header-logout-button">
+                로그아웃
+            </button>
+        </form>
+
+    </nav>
+</header>

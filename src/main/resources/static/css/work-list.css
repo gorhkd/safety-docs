@@ -1,0 +1,338 @@
+/* ================================
+   작업 목록 페이지
+================================ */
+
+.work-list-page {
+    width: 100%;
+    max-width: 840px;
+
+    margin: 0 auto;
+    padding: 40px 0 70px;
+}
+
+
+/* ================================
+   페이지 제목
+================================ */
+
+.page-header {
+    margin-bottom: 27px;
+}
+
+.page-header h1 {
+    margin: 0 0 7px;
+
+    color: #071a31;
+
+    font-size: 21px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    margin: 0;
+
+    color: #718198;
+
+    font-size: 12px;
+}
+
+.page-header strong {
+    font-weight: 500;
+}
+
+
+/* ================================
+   검색창
+================================ */
+
+.search-form {
+    margin-bottom: 19px;
+}
+
+.search-box {
+    position: relative;
+
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+
+    color: #708098;
+    font-size: 13px;
+
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-box input {
+    width: 100%;
+    height: 36px;
+
+    padding: 0 14px 0 33px;
+
+    color: #13243b;
+    background-color: #ffffff;
+    border: 1px solid #d5deea;
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition:
+            border-color 0.15s ease,
+            box-shadow 0.15s ease;
+}
+
+.search-box input::placeholder {
+    color: #94a0b1;
+}
+
+.search-box input:focus {
+    border-color: #426d9c;
+    box-shadow: 0 0 0 2px rgba(45, 93, 143, 0.1);
+}
+
+/* input type=search 기본 X 제거 */
+.search-box input::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
+
+/* ================================
+   테이블
+================================ */
+
+.work-table-wrapper {
+    overflow: hidden;
+
+    border: 1px solid #d6dfea;
+    border-radius: 7px;
+}
+
+.work-table {
+    width: 100%;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.work-table thead {
+    background-color: #f7f9fc;
+}
+
+.work-table th {
+    height: 33px;
+    padding: 0 16px;
+
+    color: #596a80;
+    border-bottom: 1px solid #d9e1eb;
+
+    font-size: 10px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.work-table td {
+    height: 43px;
+    padding: 0 16px;
+
+    color: #12233a;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dce3ec;
+
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.work-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.work-table tbody tr {
+    transition: background-color 0.12s ease;
+}
+
+.work-table tbody tr:hover td {
+    background-color: #fafbfd;
+}
+
+
+/* ================================
+   열 너비
+================================ */
+
+.work-name-column {
+    width: auto;
+}
+
+.document-column {
+    width: 80px;
+}
+
+.date-column {
+    width: 96px;
+}
+
+
+/* ================================
+   작업명
+================================ */
+
+.work-name-cell a {
+    color: #071a31;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: color 0.15s ease;
+}
+
+.work-name-cell a:hover {
+    color: #174b81;
+}
+
+
+/* ================================
+   문서 상태
+================================ */
+
+.document-cell {
+    text-align: left;
+}
+
+.document-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    white-space: nowrap;
+}
+
+.document-status.registered {
+    color: #10aa54;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.document-status.registered i {
+    font-size: 7px;
+}
+
+.document-status.unregistered {
+    color: #c0cad7;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* ================================
+   등록일
+================================ */
+
+.date-cell {
+    color: #6f8097 !important;
+
+    font-size: 10px !important;
+    white-space: nowrap;
+}
+
+
+/* ================================
+   빈 목록
+================================ */
+
+.empty-table-cell {
+    height: 180px !important;
+
+    color: #8997a9 !important;
+    text-align: center;
+}
+
+.empty-icon {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #b1bdca;
+    font-size: 23px;
+}
+
+.empty-table-cell p {
+    margin: 0;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   반응형
+================================ */
+
+@media (max-width: 900px) {
+    .work-list-page {
+        max-width: none;
+        padding-right: 36px;
+        padding-left: 36px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .work-list-page {
+        padding: 30px 14px 50px;
+    }
+
+    .page-header {
+        margin-bottom: 22px;
+    }
+
+    .page-header h1 {
+        font-size: 20px;
+    }
+
+    .work-table th,
+    .work-table td {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .document-column {
+        width: 69px;
+    }
+
+    .date-column {
+        width: 81px;
+    }
+
+    .work-name-cell a {
+        display: block;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+
+@media (max-width: 470px) {
+    /*
+     * 작은 모바일에서는 등록일 열을 숨겨
+     * 작업명과 문서 상태 공간을 확보한다.
+     */
+    .date-column,
+    .date-cell {
+        display: none;
+    }
+
+    .document-column {
+        width: 67px;
+    }
+}

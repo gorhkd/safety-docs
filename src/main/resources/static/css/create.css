@@ -1,0 +1,314 @@
+.create-page {
+    width: 100%;
+    max-width: 560px;
+
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+}
+
+
+/* ================================
+   페이지 제목
+================================ */
+
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    margin: 0 0 9px;
+
+    color: #071a31;
+
+    font-size: 20px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    margin: 0;
+
+    color: #728197;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   등록 폼
+================================ */
+
+.form-card {
+    overflow: hidden;
+
+    background-color: #ffffff;
+    border: 1px solid #d5dee9;
+    border-radius: 7px;
+}
+
+.form-section {
+    padding: 23px;
+
+    border-bottom: 1px solid #dde4ed;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.work-name-section {
+    padding-top: 24px;
+    padding-bottom: 21px;
+}
+
+.field-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #14233a;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.required-mark {
+    color: #e33f46;
+}
+
+.work-name-input {
+    width: 100%;
+    height: 37px;
+
+    padding: 0 12px;
+
+    color: #15243a;
+    background-color: #ffffff;
+    border: 1px solid #d5deea;
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    outline: none;
+    transition:
+            border-color 0.15s ease,
+            box-shadow 0.15s ease;
+}
+
+.work-name-input::placeholder {
+    color: #95a2b3;
+}
+
+.work-name-input:focus {
+    border-color: #24578e;
+    box-shadow: 0 0 0 2px rgba(36, 87, 142, 0.1);
+}
+
+.work-name-input.input-error {
+    border-color: #dc3545;
+}
+
+.field-error {
+    margin: 7px 0 0;
+
+    color: #dc3545;
+    font-size: 11px;
+}
+
+
+/* ================================
+   문서 업로드
+================================ */
+
+.document-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0 0 14px;
+
+    color: #122239;
+
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.document-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+}
+
+.sop-title .document-dot {
+    background-color: #1d5bea;
+}
+
+.risk-title .document-dot {
+    background-color: #c75b09;
+}
+
+.upload-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 92px;
+    padding: 15px;
+
+    color: #71829a;
+    background-color: #f8fafd;
+    border: 1px dashed #cfdaea;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition:
+            background-color 0.15s ease,
+            border-color 0.15s ease;
+}
+
+.upload-box:hover,
+.upload-box.dragging {
+    background-color: #f2f6fc;
+    border-color: #7796bd;
+}
+
+.upload-icon {
+    margin-bottom: 7px;
+
+    color: #2261e7;
+    font-size: 17px;
+}
+
+.risk-upload-box .upload-icon {
+    color: #d36a19;
+}
+
+.upload-message {
+    color: #73849c;
+
+    font-size: 11px;
+}
+
+.upload-message strong {
+    color: #1d5ad7;
+    font-weight: 700;
+}
+
+.risk-upload-box .upload-message strong {
+    color: #c65d0f;
+}
+
+.upload-description {
+    margin-top: 4px;
+
+    color: #a0acbc;
+
+    font-size: 9px;
+}
+
+.selected-file-name {
+    display: none;
+
+    margin-top: 8px;
+
+    color: #173f70;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.selected-file-name.visible {
+    display: block;
+}
+
+
+/* ================================
+   하단 버튼
+================================ */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+
+    margin-top: 19px;
+}
+
+.cancel-button,
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 36px;
+    padding: 0 18px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cancel-button {
+    color: #67768b;
+    background-color: #ffffff;
+    border: 1px solid #d6dee8;
+}
+
+.cancel-button:hover {
+    color: #28384d;
+    background-color: #f7f9fb;
+}
+
+.submit-button {
+    color: #ffffff;
+    background-color: #153f70;
+    border: 1px solid #153f70;
+
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0e325d;
+}
+
+
+/* ================================
+   모바일
+================================ */
+
+@media (max-width: 600px) {
+    .create-page {
+        padding: 30px 14px 50px;
+    }
+
+    .form-section {
+        padding: 20px 17px;
+    }
+
+    .form-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cancel-button,
+    .submit-button {
+        width: 100%;
+    }
+}

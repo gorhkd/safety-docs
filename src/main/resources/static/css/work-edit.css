@@ -1,0 +1,221 @@
+/* ================================
+   현재 위치
+================================ */
+
+.edit-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 25px;
+
+    color: #77879b;
+    font-size: 10px;
+}
+
+.edit-breadcrumb a {
+    color: #77879b;
+}
+
+.edit-breadcrumb a:hover {
+    color: #153f70;
+}
+
+.edit-breadcrumb i {
+    color: #a0acba;
+    font-size: 8px;
+}
+
+.edit-breadcrumb span {
+    color: #17283f;
+    font-weight: 700;
+}
+
+
+/* ================================
+   현재 등록 파일
+================================ */
+
+.current-file-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    min-height: 66px;
+    margin-bottom: 16px;
+    padding: 11px 13px;
+
+    background-color: #f8fafd;
+    border: 1px solid #d9e2ed;
+    border-radius: 6px;
+}
+
+.current-file-information {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    min-width: 0;
+}
+
+.current-file-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 31px;
+    height: 31px;
+
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.sop-current-file .current-file-icon {
+    color: #3970df;
+    background-color: #eaf2ff;
+}
+
+.risk-current-file .current-file-icon {
+    color: #c9671c;
+    background-color: #fff1df;
+}
+
+.current-file-text {
+    min-width: 0;
+}
+
+.current-file-label {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #8190a3;
+    font-size: 9px;
+}
+
+.current-file-text strong {
+    display: block;
+    overflow: hidden;
+
+    color: #15253b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.current-file-text p {
+    display: flex;
+    gap: 4px;
+
+    margin: 4px 0 0;
+
+    color: #738399;
+    font-size: 9px;
+}
+
+.current-file-open-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    flex-shrink: 0;
+
+    height: 29px;
+    padding: 0 10px;
+
+    color: #526c8b;
+    background-color: #ffffff;
+    border: 1px solid #cfd9e6;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.current-file-open-button:hover {
+    color: #153f70;
+    background-color: #f5f8fc;
+    border-color: #aebed1;
+}
+
+
+/* ================================
+   기존 파일 없음
+================================ */
+
+.empty-current-file {
+    margin-bottom: 16px;
+    padding: 15px;
+
+    color: #8997a9;
+    background-color: #f8fafd;
+    border: 1px solid #dce4ed;
+    border-radius: 6px;
+
+    font-size: 10px;
+    text-align: center;
+}
+
+
+/* ================================
+   파일 교체 안내
+================================ */
+
+.replacement-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-bottom: 8px;
+
+    color: #285eb8;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.replacement-label span {
+    margin-left: 3px;
+
+    color: #919dac;
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.risk-replacement-label {
+    color: #b75a14;
+}
+
+.edit-upload-box {
+    min-height: 84px;
+}
+
+
+/* ================================
+   모바일
+================================ */
+
+@media (max-width: 500px) {
+    .current-file-card {
+        align-items: flex-start;
+    }
+
+    .current-file-text strong {
+        max-width: 210px;
+    }
+
+    .replacement-label {
+        flex-wrap: wrap;
+    }
+
+    .replacement-label span {
+        width: 100%;
+        margin-left: 19px;
+    }
+}

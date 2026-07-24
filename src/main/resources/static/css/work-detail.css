@@ -1,0 +1,381 @@
+/* ================================
+   작업 상세 페이지
+================================ */
+
+.work-detail-page {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 37px 0 70px;
+}
+
+
+/* ================================
+   경로 표시
+================================ */
+
+.breadcrumb-navigation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 29px;
+
+    color: #708198;
+    font-size: 10px;
+}
+
+.breadcrumb-navigation a {
+    color: #708198;
+}
+
+.breadcrumb-navigation a:hover {
+    color: #153f70;
+}
+
+.breadcrumb-navigation i {
+    color: #94a1b1;
+    font-size: 8px;
+}
+
+.breadcrumb-navigation span {
+    color: #182940;
+    font-weight: 700;
+}
+
+
+/* ================================
+   작업 제목
+================================ */
+
+.detail-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 31px;
+}
+
+.detail-header h1 {
+    margin: 0 0 8px;
+
+    color: #071a31;
+
+    font-size: 24px;
+    font-weight: 750;
+    letter-spacing: -0.7px;
+}
+
+.detail-header p {
+    margin: 0;
+
+    color: #6f8198;
+
+    font-size: 10px;
+}
+
+.share-link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    height: 31px;
+    padding: 0 13px;
+
+    color: #60758f;
+    background-color: #ffffff;
+    border: 1px solid #d5deea;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+            color 0.15s ease,
+            background-color 0.15s ease,
+            border-color 0.15s ease;
+}
+
+.share-link-button:hover {
+    color: #153f70;
+    background-color: #f7f9fc;
+    border-color: #aebdd0;
+}
+
+
+/* ================================
+   문서 카드 공통
+================================ */
+
+.document-card {
+    overflow: hidden;
+
+    margin-bottom: 19px;
+
+    background-color: #ffffff;
+    border: 1px solid #d6dfea;
+    border-radius: 7px;
+}
+
+.document-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 43px;
+    padding: 0 16px;
+
+    border-bottom: 1px solid #d8e1ec;
+}
+
+.document-card-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.document-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+}
+
+.document-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 27px;
+    height: 19px;
+    padding: 0 7px;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   SOP 색상
+================================ */
+
+.sop-card .document-card-header {
+    background-color: #eef5ff;
+}
+
+.sop-card .document-card-header h2,
+.sop-card .document-count {
+    color: #1755d1;
+}
+
+.sop-card .document-dot {
+    background-color: #1d5bea;
+}
+
+.sop-card .document-icon {
+    color: #4376e6;
+    background-color: #edf3ff;
+}
+
+.sop-card .document-open-button {
+    color: #205bd0;
+    background-color: #f5f8ff;
+    border-color: #b9d0fc;
+}
+
+.sop-card .document-open-button:hover {
+    background-color: #eaf1ff;
+}
+
+
+/* ================================
+   위험성평가서 색상
+================================ */
+
+.risk-card .document-card-header {
+    background-color: #fff9e9;
+}
+
+.risk-card .document-card-header h2,
+.risk-card .document-count {
+    color: #b85508;
+}
+
+.risk-card .document-dot {
+    background-color: #cb620d;
+}
+
+.risk-card .document-icon {
+    color: #d17128;
+    background-color: #fff5e7;
+}
+
+.risk-card .document-open-button {
+    color: #b75b13;
+    background-color: #fff9ef;
+    border-color: #efc99f;
+}
+
+.risk-card .document-open-button:hover {
+    background-color: #fff1dc;
+}
+
+
+/* ================================
+   문서 목록
+================================ */
+
+.document-list {
+    background-color: #ffffff;
+}
+
+.document-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    min-height: 61px;
+    padding: 12px 16px;
+
+    border-bottom: 1px solid #e1e7ef;
+}
+
+.document-item:last-child {
+    border-bottom: none;
+}
+
+.document-information {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.document-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 29px;
+    height: 29px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.document-information > div {
+    min-width: 0;
+}
+
+.document-information h3 {
+    overflow: hidden;
+
+    margin: 0 0 5px;
+
+    color: #12233a;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.document-information p {
+    margin: 0;
+
+    color: #708199;
+
+    font-size: 9px;
+}
+
+.information-divider {
+    margin: 0 3px;
+}
+
+.document-open-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    flex-shrink: 0;
+
+    height: 29px;
+    padding: 0 11px;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   문서 미등록
+================================ */
+
+.empty-document {
+    padding: 30px 16px;
+
+    color: #94a1b1;
+
+    font-size: 10px;
+    text-align: center;
+}
+
+
+/* ================================
+   반응형
+================================ */
+
+@media (max-width: 660px) {
+    .work-detail-page {
+        max-width: none;
+        padding: 30px 16px 50px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .breadcrumb-navigation {
+        margin-bottom: 23px;
+    }
+
+    .detail-header {
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .detail-header h1 {
+        font-size: 21px;
+    }
+
+    .document-item {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .document-information h3 {
+        max-width: 210px;
+    }
+}

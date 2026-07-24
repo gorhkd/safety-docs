@@ -4,7 +4,7 @@
         th:fragment="header(activeMenu)"
         class="top-header"
 >
-    <a th:href="@{/home}" class="brand">
+    <a th:href="@{/admin/works}" class="brand">
         <span class="brand-icon">
             <i class="bi bi-grid-fill"></i>
         </span>
@@ -15,7 +15,7 @@
     <nav class="header-actions">
         <a
                 sec:authorize="isAuthenticated()"
-                th:href="@{list}"
+                th:href="@{/admin/works/list}"
                 class="header-nav-link"
                 th:classappend="${activeMenu == 'list'} ? ' active' : ''"
                 th:attr="aria-current=${activeMenu == 'list'} ? 'page' : null"
@@ -25,7 +25,7 @@
 
         <a
                 sec:authorize="isAuthenticated()"
-                th:href="@{create}"
+                th:href="@{/admin/works/create}"
                 class="header-create-button"
                 th:classappend="${activeMenu == 'create'} ? ' active' : ''"
                 th:attr="aria-current=${activeMenu == 'create'} ? 'page' : null"
